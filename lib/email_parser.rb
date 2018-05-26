@@ -4,14 +4,14 @@
 # or whitespace (' ').
 class EmailParser
 
-  attr_accessor :emails, :file
+  attr_accessor :emails, :email_file
 
   def self.new(file)
-    @file = file
+    @email_file = file
   end
 
-  def parse
-    @emails = @file.split(/, |w+/)
+  def self.parse
+    @emails = @email_file.split(/, |w+/)
   end
 
 end
