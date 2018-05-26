@@ -11,7 +11,7 @@ class EmailParser
   end
 
   def self.parse
-    @emails = @email_file.split(/, |w+/)
+    @emails = @email_file.split(/, |\s+/)
   end
 
 end
